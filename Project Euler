@@ -1,0 +1,29 @@
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+    int i,j;
+    long d,n3,n1,n2;
+    for(i=999; i>900; i--)
+    {
+        for(j=999; j>900; j--)
+        {
+            n1=0,n3=0,n2=0;
+            n1=i*j;
+            n2=n1;
+            while(n1>0)     // Reverse
+            {
+                d= n1 % 10;
+                n1=n1 / 10;
+                n3 = n3 *10 + d ;
+            }
+            if(n3 == n2)
+            {
+                printf("%ld \n",n2);  // check the number to the reverse number
+                printf("%d  %d\n",i,j);
+                break;
+            }
+        }
+    }
+    return 0;
+}
